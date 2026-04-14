@@ -4,3 +4,6 @@ dist
 .env.local
 .claude/
 *.txt
+
+# Local Netlify folder
+.netlify
