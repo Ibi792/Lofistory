@@ -1,0 +1,186 @@
+.page {
+  width: 1440px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* ── Main content area ── */
+.main {
+  position: relative;
+  width: 1440px;
+  height: 917px; /* 1024 - 107px header */
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: -185px;
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+  filter: blur(8px);
+  z-index: 0;
+  transform: scale(1.06);
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+
+/* ── Left: A Brief History panel ── */
+.historyPanel {
+  position: absolute;
+  left: 61px;
+  top: 49px; /* 156 - 107 */
+  width: 526px;
+  height: 526px;
+  background: rgba(255, 109, 87, 0.9);
+  border-radius: 70px;
+  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.16);
+  z-index: 1;
+  padding: 28px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  will-change: transform;
+  cursor: default;
+}
+
+.sectionTitle {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 64px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+}
+
+.historyText {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Right: Famous Tracks panel ── */
+.tracksPanel {
+  position: absolute;
+  left: 638px;
+  top: 56px; /* 163 - 107 */
+  width: 761px;
+  height: 513px;
+  background: rgba(103, 142, 237, 0.9);
+  border-radius: 40px;
+  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.16);
+  z-index: 1;
+  padding: 24px 20px 24px 51px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  will-change: transform;
+  cursor: default;
+}
+
+.trackList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+/* ── Bottom: Notable Artists panel ── */
+.artistsPanel {
+  position: absolute;
+  left: 76px;
+  top: 607px; /* 714 - 107 */
+  width: 1331px;
+  height: 258px;
+  background: rgba(118, 191, 119, 0.9);
+  border-radius: 57px;
+  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.16);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 8px;
+  will-change: transform;
+  cursor: default;
+}
+
+.notableTitle {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 55px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  align-self: center;
+}
+
+.artistGrid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.artistWrap {
+  position: relative;
+  width: 207px;
+  height: 193px;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  flex-shrink: 0;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.28s ease,
+              border-color 0.28s ease;
+  cursor: pointer;
+}
+
+.artistWrap:hover {
+  transform: scale(1.13) translateY(-8px) rotate(1.5deg);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+  border-color: #FFFF9A;
+  z-index: 10;
+}
+
+.artistPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.artistOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease;
+}
+
+.artistWrap:hover .artistOverlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.artistName {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 28px;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.artistWrap:hover .artistName {
+  opacity: 1;
+  transform: translateY(0);
+}

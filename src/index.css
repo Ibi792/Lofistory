@@ -1,0 +1,11 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Just Another Hand', cursive;
+  background: #fff;
+  min-width: 1440px;
+}

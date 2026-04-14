@@ -1,0 +1,91 @@
+.page {
+  width: 1440px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  width: 1440px;
+  height: 917px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: -185px;
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+  filter: blur(8px);
+  z-index: 0;
+  transform: scale(1.06);
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+
+.panel {
+  position: relative;
+  z-index: 1;
+  width: 680px;
+  background: rgba(255, 109, 87, 0.9);
+  border-radius: 70px;
+  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.16);
+  padding: 48px 56px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  will-change: transform;
+  cursor: default;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.title {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 80px;
+  font-weight: 400;
+  color: #FFFF9A;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+}
+
+.body {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 32px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.mission {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 34px;
+  font-weight: 400;
+  color: #FFFF9A;
+  line-height: 1.15;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 18px;
+  margin-top: 4px;
+}

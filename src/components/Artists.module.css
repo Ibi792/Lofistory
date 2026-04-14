@@ -1,0 +1,87 @@
+/* Outer page — full viewport, contains fixed bg layers */
+.page {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fixed blurred background — persists while scrolling */
+.bgFixed {
+  position: fixed;
+  top: -4%;
+  left: -4%;
+  width: 108%;
+  height: 108%;
+  object-fit: cover;
+  filter: blur(8px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Scrollable layout container — sits above the fixed layers */
+.layout {
+  position: relative;
+  z-index: 1;
+  width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Main content area */
+.main {
+  padding: 48px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* Loading state */
+.loading {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 120px 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Category section */
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoryHeader {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 28px;
+  background: var(--cat-color, rgba(103, 142, 237, 0.88));
+  border-radius: 20px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
+}
+
+.categoryTitle {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 52px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.categorySubtitle {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1;
+}
+
+/* Artist card grid — 5 columns */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
