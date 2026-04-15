@@ -52,7 +52,7 @@ export default function RainAmbience() {
   const gainRef   = useRef(null)
   const sourceRef = useRef(null)
   const [active, setActive] = useState(false)
-  const [volume, setVolume] = useState(0.225)
+  const [volume, setVolume] = useState(0.1125)
 
   const start = useCallback((vol) => {
     if (!ctxRef.current) {
@@ -118,7 +118,7 @@ export default function RainAmbience() {
         <input
           type="range"
           min="0"
-          max="0.6"
+          max="0.3"
           step="0.005"
           value={volume}
           onChange={handleVolume}
