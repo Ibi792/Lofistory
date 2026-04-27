@@ -1,28 +1,22 @@
-.page {
-  width: 1440px;
-  margin: 0 auto;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-
 /* ── Main content area ── */
 .main {
   position: relative;
   width: 1440px;
   height: 917px; /* 1024 - 107px header */
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .bgImage {
-  position: absolute;
-  top: 0;
-  left: -185px;
-  width: 1920px;
-  height: 1080px;
+  position: fixed;
+  top: -4%;
+  left: -4%;
+  width: 108%;
+  height: 108%;
   object-fit: cover;
   filter: blur(8px);
   z-index: 0;
+  pointer-events: none;
   transform: scale(1.06);
   transform-origin: center center;
   transition: transform 0.12s ease-out;
@@ -183,4 +177,109 @@
 .artistWrap:hover .artistName {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Responsive layout ── */
+@media (max-width: 1100px) {
+  .main {
+    width: 100%;
+    height: auto;
+    min-height: calc(100svh - 107px);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    overflow: hidden;
+  }
+
+  .historyPanel {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    padding: 24px 28px 28px;
+    gap: 16px;
+  }
+
+  .tracksPanel {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    padding: 20px 20px 20px 28px;
+    gap: 8px;
+  }
+
+  .artistsPanel {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    padding: 16px 16px 20px;
+    gap: 12px;
+  }
+
+  .artistGrid {
+    padding: 0 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .artistWrap {
+    width: calc(20% - 10px);
+    min-width: 120px;
+    height: auto;
+    aspect-ratio: 207 / 193;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    min-height: calc(100svh - 64px);
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 44px;
+  }
+
+  .historyText {
+    font-size: 32px;
+  }
+
+  .notableTitle {
+    font-size: 40px;
+  }
+
+  .artistWrap {
+    width: calc(33% - 10px);
+    min-width: 90px;
+  }
+
+  .artistName {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 36px;
+  }
+
+  .historyText {
+    font-size: 26px;
+  }
+
+  .artistWrap {
+    width: calc(50% - 8px);
+    min-width: 0;
+  }
 }

@@ -1,5 +1,4 @@
 import { useRef, useCallback, useEffect, useState } from 'react'
-import Header from './Header'
 import TrackPlayer from './TrackPlayer'
 import RainCanvas from './RainCanvas'
 import { useTilt } from '../hooks/useTilt'
@@ -53,14 +52,11 @@ export default function Home() {
   }, [])
 
   return (
-    <div className={styles.page}>
-      <Header />
-
-      <main
-        className={styles.main}
-        onMouseMove={onMainMouseMove}
-        onMouseLeave={onMainMouseLeave}
-      >
+    <main
+      className={styles.main}
+      onMouseMove={onMainMouseMove}
+      onMouseLeave={onMainMouseLeave}
+    >
         {/* Background — parallax layer */}
         <img
           ref={bgRef}
@@ -114,7 +110,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-      </main>
-    </div>
+    </main>
   )
 }

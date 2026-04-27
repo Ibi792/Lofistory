@@ -1,5 +1,4 @@
 import { useRef, useCallback } from 'react'
-import Header from './Header'
 import RainCanvas from './RainCanvas'
 import { useTilt } from '../hooks/useTilt'
 import styles from './About.module.css'
@@ -20,9 +19,7 @@ export default function About() {
   }, [])
 
   return (
-    <div className={styles.page}>
-      <Header />
-      <main className={styles.main} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
+    <main className={styles.main} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
         <img ref={bgRef} src="/images/bg.png" alt="" className={styles.bgImage} />
         <RainCanvas />
 
@@ -48,7 +45,6 @@ export default function About() {
             this world — one warm, crackling record at a time.
           </p>
         </section>
-      </main>
-    </div>
+    </main>
   )
 }

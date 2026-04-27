@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Header from './Header'
 import RainCanvas from './RainCanvas'
 import ArtistCard from './ArtistCard'
 import { fetchAllArtists } from '../spotify/client'
@@ -70,8 +69,6 @@ export default function Artists() {
       <RainCanvas fixed />
 
       <div className={styles.layout}>
-        <Header />
-
         <main className={styles.main}>
           {error ? (
             <p className={styles.loading}>⚠ {error}</p>

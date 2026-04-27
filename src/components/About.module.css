@@ -1,30 +1,23 @@
-.page {
-  width: 1440px;
-  margin: 0 auto;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-
 .main {
   position: relative;
-  width: 1440px;
-  height: 917px;
-  overflow: hidden;
+  width: 100%;
+  min-height: calc(100svh - 107px);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
 }
 
 .bgImage {
-  position: absolute;
-  top: 0;
-  left: -185px;
-  width: 1920px;
-  height: 1080px;
+  position: fixed;
+  top: -4%;
+  left: -4%;
+  width: 108%;
+  height: 108%;
   object-fit: cover;
   filter: blur(8px);
   z-index: 0;
+  pointer-events: none;
   transform: scale(1.06);
   transform-origin: center center;
   transition: transform 0.12s ease-out;
@@ -35,6 +28,7 @@
   position: relative;
   z-index: 1;
   width: 680px;
+  max-width: 100%;
   background: rgba(255, 109, 87, 0.9);
   border-radius: 70px;
   box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.16);
@@ -88,4 +82,35 @@
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 18px;
   margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    min-height: calc(100svh - 64px);
+    padding: 24px 16px;
+    align-items: flex-start;
+  }
+
+  .panel {
+    border-radius: 32px;
+    padding: 28px 28px 32px;
+    gap: 16px;
+  }
+
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .body {
+    font-size: 24px;
+  }
+
+  .mission {
+    font-size: 26px;
+  }
 }
