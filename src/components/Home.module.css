@@ -180,7 +180,7 @@
 }
 
 /* ── Responsive layout ── */
-@media (max-width: 1100px) {
+@media (max-width: 1439px) {
   .main {
     width: 100%;
     height: auto;
